@@ -11,10 +11,10 @@ CFLAGS_DEBUG = -O3 -g
 endif
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(CFLAGS_DEBUG) -c -o $@ $< -flto
+	$(CC) $(CFLAGS) $(CFLAGS_DEBUG) -c -o $@ $<
 
 test: $(OBJECTS)
-	$(CC) $(CFLAGS) $(CFLAGS_DEBUG) -o test $^ -flto
+	$(CC) $(CFLAGS) $(CFLAGS_DEBUG) -o test $^
 
 clean:
 	@rm -vf *.o
